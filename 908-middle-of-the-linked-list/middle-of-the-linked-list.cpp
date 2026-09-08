@@ -11,6 +11,7 @@
 class Solution {
 public:
     ListNode* middleNode(ListNode* head) {
+         
 
         if (head == NULL) {
             return head;
@@ -34,4 +35,5 @@ public:
 
         return newhead;
     }
+
 };
