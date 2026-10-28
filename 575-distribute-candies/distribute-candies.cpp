@@ -1,7 +1,7 @@
 class Solution {
 public:
     int distributeCandies(vector<int>& nums) {
-        map<int,int> ma;
+        unordered_map<int,int> ma;
 
         for(int i: nums){
             ma[i] = 1;
