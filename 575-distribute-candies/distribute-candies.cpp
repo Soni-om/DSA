@@ -1,23 +1,19 @@
 class Solution {
 public:
-    int distributeCandies(vector<int>& candyType) {
-        sort(candyType.begin(), candyType.end());
-        int uniqueValue = 1;
-        int DrAadvaice = candyType.size() / 2;
-        int Stor = candyType[0];
+    int distributeCandies(vector<int>& nums) {
+        map<int,int> ma;
 
-        for(int i=1; i<candyType.size(); i++){
-            
-            if(candyType[i] != Stor){
-                uniqueValue++;
-                Stor = candyType[i];
-            }
+        for(int i: nums){
+            ma[i] = 1;
         }
+        int uniqElements = ma.size();
+        int DoctorAdvised = nums.size() / 2;
 
-        if(DrAadvaice >= uniqueValue){
-            return uniqueValue;
+        if(DoctorAdvised >= uniqElements){
+            return uniqElements;
         }else{
-            return DrAadvaice;
+            return DoctorAdvised;
         }
+
     }
 };
